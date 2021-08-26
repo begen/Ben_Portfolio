@@ -23,12 +23,6 @@ select location,date,population,total_cases, (cast(total_cases as float))/cast(p
 from CovidDeath
 where location like '%united states%'
 
--- Countries with highest infection rates
-select location,population,max(total_cases) as HighestInfectionCount, max((cast( total_cases as float))/cast(population as float))*100 as PctPopInfected
-from CovidDeath
---where location like '%united states%'
-group by location, population
-order by PctPopInfected desc
 
 --- Breaking down by continent
 select continent,max(cast(total_deaths as int)) as TotalDeathCount
@@ -46,13 +40,44 @@ where continent is null
 group by location
 order by TotalDeathCount desc
 
+Global numbers
+
+--1
+
 --Global numbers
-select date, sum(new_cases) as total_cases,sum(new_deaths) as total_death, sum(cast(new_deaths as float))/sum(cast(total_deaths as float))*100 as DeathPCT
+select  sum(new_cases) as total_cases, sum(cast(new_deaths as int)) as total_death, sum(cast(new_deaths as float ))/sum(cast(New_Cases as float ))*100 as DeathPCT
 from CovidDeath
 where continent is not null
 -- group by date
 order by 1,2
 
+
+--2
+
+--Show Countries with Highest Death Count
+select location,max(cast(new_deaths as int)) as TotalDeathCount
+from CovidDeath
+--where location like '%united states%'
+where continent is null
+and location not in ('World','European Union','International')
+group by location
+order by TotalDeathCount desc
+
+--3
+-- Countries with highest infection rates
+select location,population,max(total_cases) as HighestInfectionCount, max((cast( total_cases as float))/cast(population as float))*100 as PctPopInfected
+from CovidDeath
+--where location like '%united states%'
+group by location, population
+order by PctPopInfected desc
+
+
+-- 4 
+select location,population,date, max(cast(total_cases as float)) as HighestInfectionCount, max((cast( total_cases as float))/cast(population as float))*100 as PctPopInfected
+from CovidDeath
+--where location like '%united states%'
+group by location, population,date
+order by PctPopInfected desc
 
 
 -- Looking at total population vs vaccinations
