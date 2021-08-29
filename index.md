@@ -6,7 +6,7 @@
 Below you can find links to my portfolio: 
 
 1. SQL [editor on GitHub](https://github.com/begen/Ben_Portfolio/blob/06fab362b0591c8a03d930930625855ad3d4d2dd/Covid%20SQL.sql) to see SQL queries
-2. Tableau
+2. Tableau [Dashboard](https://github.com/begen/Ben_Portfolio/blob/83d38b89f0bbfaebcee882a3248697060750fa70/Tableau%20Covid%20Dashboard.png)
 3. Python
 4. Power Bi
 6. Data Science
@@ -41,6 +41,11 @@ Syntax highlighted code block
 
 [Link](url) and ![Image](src)
 ```
+
+Tableau 
+[Link](url)
+
+
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
