@@ -1,8 +1,24 @@
+
+
+
 ## Welcome to GitHub Pages
+
+Below you can find links to my portfolio: 
+
+1. SQL [editor on GitHub](https://github.com/begen/Ben_Portfolio/blob/06fab362b0591c8a03d930930625855ad3d4d2dd/Covid%20SQL.sql) to see SQL queries
+2. Tableau
+3. Python
+4. Power Bi
+6. Data Science
+
+
 
 You can use the [editor on GitHub](https://github.com/begen/Ben_Portfolio/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+
+
 
 ### Markdown
 
